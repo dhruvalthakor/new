@@ -310,28 +310,28 @@
   // //  question 10
 
 class Account {
-    constructor(accountNumber, balance = 0) {
-        this.accountNumber = accountNumber,
+    constructor(account, balance = 0) {
+        this.account = account,
             this.balance = balance
     }
     deposit(amount) {
-        this.balance = this.balance + amount
         this.balance += amount
-        console.log("your total balance is : ", this.balance);
     }
 }
 class SavingsAccount extends Account {
-    constructor(accountNumber, balance = 0, interestRate) {
-        super(accountNumber, balance)
-        this.interestRate = interestRate
+    constructor(account, balance = 0, interestr) {
+        super(account, balance)
+        this.interestr = interestr
     }
     deposit(amount) {
-        let interest = this.balance * this.interestRate / 100
+        let interest = this.balance * this.interestr / 100
         this.balance = this.balance + amount + interest
         console.log("your total balance with interest is : ", this.balance);
     }
 }
-let savingsAccount1 = new SavingsAccount(7890675, 20000, 10)
+
+
+let savingsAccount1 = new SavingsAccount(122344, 10000, 10)
 savingsAccount1.deposit(2000)
 
 
