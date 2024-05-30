@@ -334,25 +334,7 @@ class SavingsAccount extends Account {
 let savingsAccount1 = new SavingsAccount(122344, 10000, 10)
 savingsAccount1.deposit(2000)
 
-class CheckingAccount extends Account {
-  constructor(accountNumber, balance, overdraftLimit) {
-    super(accountNumber, balance);
-    this.overdraftLimit = overdraftLimit;
-  }
 
-  deposit(amount) {
-    if (this.balance + amount < this.overdraftLimit) {
-      console.log('Deposit declined due to overdraft limit.');
-    } else {
-      super.deposit(amount);
-    }
-  }
-}
-
-
-let checking = new CheckingAccount('654321', 500, 700);
-checking.deposit(-200);
-console.log(checking.balance);
 </script>
 
 </html>
